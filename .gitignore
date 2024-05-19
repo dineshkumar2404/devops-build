@@ -1,2 +1,6 @@
-__pycache__
-*.log
+.dockerignore
+node_modules/
+.env
+# IDE specific files
+.idea/
+.vscode/
