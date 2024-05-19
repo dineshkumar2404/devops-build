@@ -1,3 +1,12 @@
-FROM nginx:latest
+FROM python:3.9  
 
-COPY build /usr/share/nginx/html
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install -r requirements.txt  
+
+COPY . .
+
+CMD ["python", "your_app.py"]  
+

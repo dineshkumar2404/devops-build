@@ -1,8 +1,12 @@
-version: '3.9'
+
+version: "3.8"
 
 services:
-    web:
-      image: project:v1
-      container_name: react
-      ports:
-        - "80:80"
+
+  myapp:
+
+    build: .
+
+    ports:
+
+      - "80:80"
