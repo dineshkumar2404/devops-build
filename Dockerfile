@@ -1,12 +1,9 @@
-FROM python:3.9  
+FROM nginx:latest
 
-WORKDIR /app
+COPY index.html /usr/share/nginx/html/
 
-COPY requirements.txt .
+EXPOSE 80
 
-RUN pip install -r requirements.txt  
+WORKDIR /usr/share/nginx/html
 
-COPY . .
-
-CMD ["python", "myapp.py"]  
-
+CMD ["nginx", "-g", "daemon off;"]

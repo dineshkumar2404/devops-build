@@ -1,7 +1,14 @@
 #!/bin/bash
 
-# Update the following line with your server's SSH details if deploying remotely
-# scp -r . server_user@server_ip:/path/to/deploy/directory
 
-docker-compose up -d
+# Tag the image with the Docker Hub repository name and version
+docker tag project:v1 snsai3690/prod
+docker tag project:v1 snsai3690/dev
 
+
+# Docker login
+docker login -u snsai3690 -p dckr_poe_91AJJFREWQUvvDBVCDetRRT8c0VNqWeiyt
+
+# Push the image to Docker Hub
+docker push snsai3690/prod
+docker push snsai3690/dev
