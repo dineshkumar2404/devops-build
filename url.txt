@@ -1,0 +1,6 @@
+Github url :  https://github.com/dineshkumar2404/devops-build.git
+
+Dockerhub url : https://hub.docker.com/repositories/dk0424
+
+Deployment url : http://ec2-35-167-117-98.us-west-2.compute.amazonaws.com/
+
